@@ -70,7 +70,7 @@ const List = ({ token }) => {
             <img className="w-12 h-12 object-cover rounded-md border" src={item.image[0]} alt={item.name} />
             <p className="text-gray-800 font-medium">{item.name}</p>
             <p className="text-gray-600">{item.category}</p>
-            <p className="text-green-600 font-semibold">{currency}{item.price}</p>
+            <p className="text-green-600 font-semibold">PK {item.price}</p>
             <p
               onClick={() => removeProduct(item._id)}
               className="text-red-500 text-center cursor-pointer text-xl font-bold hover:text-red-700"

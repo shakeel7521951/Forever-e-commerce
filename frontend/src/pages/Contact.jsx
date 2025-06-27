@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -8,7 +8,8 @@ import {
   FaLinkedin,
   FaFacebook,
   FaYoutube,
-} from 'react-icons/fa';
+  FaInstagram,
+} from "react-icons/fa";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -19,13 +20,12 @@ const ContactSection = () => {
   return (
     <section className="bg-gray-50 min-h-screen py-10 h-full flex items-center px-4 md:px-10 lg:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
         {/* Left Side: Contact Details */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-black">
             Have You Any Project? <br />
@@ -33,7 +33,7 @@ const ContactSection = () => {
               className="text-rose-600 text-2xl md:text-4xl inline-block"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
               Please Drop a Message
             </motion.span>
@@ -48,7 +48,7 @@ const ContactSection = () => {
               <FaMapMarkerAlt className="text-xl text-rose-600" />
               <div>
                 <p className="font-semibold text-rose-600">Address:</p>
-                <p className="text-gray-600">89/9 Mothijheel, Dhaka, Bangladesh.</p>
+                <p className="text-gray-600">Model town Bwp.</p>
               </div>
             </div>
 
@@ -56,8 +56,7 @@ const ContactSection = () => {
               <FaPhoneAlt className="text-xl text-rose-600" />
               <div>
                 <p className="font-semibold text-rose-600">Phone:</p>
-                <p className="text-gray-600">+8801799568976</p>
-                <p className="text-gray-600">+8801904015294</p>
+                <p className="text-gray-600">+92 301487487</p>
               </div>
             </div>
 
@@ -65,8 +64,7 @@ const ContactSection = () => {
               <FaEnvelope className="text-xl text-rose-600" />
               <div>
                 <p className="font-semibold text-rose-600">Email:</p>
-                <p className="text-gray-600">support@abdul.com</p>
-                <p className="text-gray-600">abdulbasetbappy@hotmail.com</p>
+                <p className="text-gray-600">fareehaasghar487@gmail.com</p>
               </div>
             </div>
           </div>
@@ -74,17 +72,38 @@ const ContactSection = () => {
           {/* Social Icons */}
           <div className="mt-6 flex justify-center lg:justify-start gap-4">
             {[
-              { icon: <FaGithub />, color: 'bg-neutral-950', label: 'GitHub' },
-              { icon: <FaLinkedin />, color: 'bg-blue-900', label: 'LinkedIn' },
-              { icon: <FaFacebook />, color: 'bg-blue-700', label: 'Facebook' },
-              { icon: <FaYoutube />, color: 'bg-red-800', label: 'YouTube' },
+              {
+                icon: <FaInstagram />,
+                link: "https://www.instagram.com/itx_me_farri_?igsh=c3cyN3o0YWV5Ym9p",
+                color: "bg-[#E1306C]",
+                label: "Instagram",
+              },
+              {
+                icon: <FaLinkedin />,
+                link: "https://www.linkedin.com/in/pakeezayaseen?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                color: "bg-blue-900",
+                label: "LinkedIn",
+              },
+              {
+                icon: <FaFacebook />,
+                link: "https://www.facebook.com/share/1B1Hzzv7zu/",
+                color: "bg-blue-700",
+                label: "Facebook",
+              },
+              {
+                icon: <FaYoutube />,
+                link: "https://youtube.com/@fareehaasghar2588?si=7SE50pNrOkm44wcf",
+                color: "bg-red-800",
+                label: "YouTube",
+              },
             ].map((item, index) => (
               <motion.a
                 key={item.label}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                href="#"
+                transition={{ type: "spring", stiffness: 300 }}
+                href={item.link}
+                target="_blank"
                 className={`group relative inline-flex h-10 w-10 items-center justify-center rounded-full ${item.color} text-neutral-200 hover:w-32 transition-all overflow-hidden`}
               >
                 <span className="hidden group-hover:inline whitespace-nowrap mr-2">
@@ -104,7 +123,7 @@ const ContactSection = () => {
           transition={{ duration: 0.9, delay: 0.2 }}
         >
           <form>
-            {['Name', 'Email', 'Phone', 'Message'].map((label, i) => (
+            {["Name", "Email", "Phone", "Message"].map((label, i) => (
               <motion.div
                 className="mb-4"
                 key={label}
@@ -113,11 +132,11 @@ const ContactSection = () => {
                 transition={{ delay: 0.3 + i * 0.1 }}
               >
                 <label className="block text-gray-200 mb-2">{label}</label>
-                {label !== 'Message' ? (
+                {label !== "Message" ? (
                   <input
-                    type={label.toLowerCase() === 'email' ? 'email' : 'text'}
+                    type={label.toLowerCase() === "email" ? "email" : "text"}
                     placeholder={`e.g ${
-                      label === 'Email' ? 'johndoe@mail.com' : 'John Doe'
+                      label === "Email" ? "johndoe@mail.com" : "John Doe"
                     }`}
                     className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg border border-gray-600 outline-none"
                   />

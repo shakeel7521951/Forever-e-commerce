@@ -74,7 +74,7 @@ const Product = () => {
   };
 
   return productData ? (
-    <div className=' pt-10 px-4 sm:px-8'>
+    <div className=' pt-10  px-4 sm:px-8'>
       <div className='max-w-7xl mx-auto'>
         {/*----------- Product Data-------------- */}
         <div className='flex gap-8 flex-col lg:flex-row bg-rose-50 p-6 rounded-xl shadow-sm'>
@@ -101,13 +101,13 @@ const Product = () => {
           </div>
 
           {/* Product Info */}
-          <div className='flex-1 lg:pl-8'>
-            <h1 className='font-bold text-3xl text-gray-900'>{productData.name}</h1>
-            <div className='flex items-center gap-1 mt-3'>
+          <div className='flex-1 lg:pl-8 mt-10'>
+            <h1 className='font-bold text-2xl text-gray-900 '>{productData.name}</h1>
+            <div className='flex items-center gap-1 mt-5'>
                 {renderStars(4)}
                 <span className='pl-2 text-sm text-gray-600'>(122 reviews)</span>
             </div>
-            <p className='mt-4 text-3xl font-bold text-pink-600'>{currency}{productData.price}</p>
+            <p className='mt-4 text-2xl font-bold text-pink-600'>PK {productData.price}</p>
             <p className='mt-4 text-gray-700'>{productData.description}</p>
             
             {/* Size Selection */}
@@ -144,7 +144,7 @@ const Product = () => {
             </button>
 
             {/* Product Policies */}
-            <div className='mt-8 pt-6 border-t border-gray-200'>
+            {/* <div className='mt-8 pt-6 border-t border-gray-200'>
               <div className='flex flex-col gap-2 text-sm text-gray-600'>
                 <div className='flex items-start gap-2'>
                   <svg className="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,7 +165,7 @@ const Product = () => {
                   <span>Easy return and exchange within 7 days</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

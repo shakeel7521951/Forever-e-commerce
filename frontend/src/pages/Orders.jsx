@@ -115,7 +115,7 @@ const Orders = () => {
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
                     <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2 text-sm">
-                      <p className="font-semibold text-pink-600">{currency}{item.price}</p>
+                      <p className="font-semibold text-pink-600">PK {item.price}</p>
                       <p className="text-gray-600">Qty: {item.quantity}</p>
                       <p className="text-gray-600">Size: {item.size}</p>
                     </div>
