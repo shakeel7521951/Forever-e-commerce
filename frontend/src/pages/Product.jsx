@@ -107,7 +107,7 @@ const Product = () => {
                 {renderStars(4)}
                 <span className='pl-2 text-sm text-gray-600'>(122 reviews)</span>
             </div>
-            <p className='mt-4 text-2xl font-bold text-pink-600'>PK {productData.price}</p>
+            <p className='mt-4 text-2xl font-bold text-pink-600'>{currency} {productData.price}</p>
             <p className='mt-4 text-gray-700'>{productData.description}</p>
             
             {/* Size Selection */}

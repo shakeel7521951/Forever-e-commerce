@@ -88,7 +88,7 @@ const Orders = ({ token }) => {
 
               {/* Amount */}
               <div className="text-xl font-semibold text-gray-800 flex items-start justify-start sm:justify-center">
-                PK {order.amount}
+                PKR {order.amount}
               </div>
 
               {/* Status */}

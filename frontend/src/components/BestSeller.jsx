@@ -109,7 +109,7 @@ const BestSeller = () => {
                   </h3>
                   <div className="mt-auto">
                     <div className="flex justify-between items-center">
-                      <span className="text-xl font-bold text-gray-900">PK {product.price}</span>
+                      <span className="text-xl font-bold text-gray-900">PKR {product.price}</span>
                       <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
                           <FiStar 

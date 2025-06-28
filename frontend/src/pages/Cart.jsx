@@ -129,7 +129,7 @@ const Cart = () => {
                       <div>
                         <h3 className="text-xl font-semibold text-pink-800">{productData.name}</h3>
                         <div className="flex items-center gap-4 mt-2">
-                          <span className="text-lg font-bold text-pink-600">PK {productData.price}</span>
+                          <span className="text-lg font-bold text-pink-600">{currency} {productData.price}</span>
                           <span className="px-3 py-1 text-xs bg-pink-100 text-pink-800 rounded-full font-medium">
                             Size: {cartItem.size}
                           </span>

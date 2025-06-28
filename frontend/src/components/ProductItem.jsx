@@ -23,7 +23,7 @@ const ProductItem = ({ id, image, name, price }) => {
       {/* Product Info */}
       <div className="mt-4 space-y-1 text-center">
         <h3 className="text-gray-800 font-semibold text-sm group-hover:text-pink-600 transition">{name}</h3>
-        <p className="text-gray-600 text-sm font-medium">PK {price}</p>
+        <p className="text-gray-600 text-sm font-medium">{currency} {price}</p>
       </div>
     </Link>
   );

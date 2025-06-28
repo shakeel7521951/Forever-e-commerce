@@ -1,7 +1,5 @@
-import React from "react";
-import { assets } from "../assets/assets";
 import { motion } from "framer-motion";
-import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiLinkedin, FiYoutube } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -15,6 +13,13 @@ const Footer = () => {
       },
     },
   };
+
+    const socialLinks = [
+    { icon: FiFacebook, link: "https://www.facebook.com/share/1B1Hzzv7zu/" },
+    { icon: FiYoutube, link: "https://youtube.com/@fareehaasghar2588?si=7SE50pNrOkm44wcf" },
+    { icon: FiInstagram, link: "https://www.instagram.com/itx_me_farri_?igsh=c3cyN3o0YWV5Ym9p" },
+    { icon: FiLinkedin, link: "https://www.linkedin.com/in/pakeezayaseen?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+  ];
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -39,7 +44,7 @@ const Footer = () => {
           {/* Brand Column */}
           <motion.div variants={itemVariants}>
             <img
-              src={assets.logo}
+              src="./companylog.jpg"
               className="w-36 mb-6"
               alt="Forever You Logo"
             />
@@ -48,19 +53,16 @@ const Footer = () => {
               brings you the latest trends with quality and comfort.
             </p>
             <div className="flex gap-4">
-              {[
-                <FiFacebook />,
-                <FiTwitter />,
-                <FiInstagram />,
-                <FiLinkedin />,
-              ].map((Icon, index) => (
+              {socialLinks.map(({ icon: Icon, link }, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -3, color: "#7c3aed" }}
                   className="text-gray-500 hover:text-indigo-600 text-xl"
                 >
-                  {Icon}
+                  <Icon />
                 </motion.a>
               ))}
             </div>
@@ -72,17 +74,15 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {["Home", "Collection", "About","Contact"].map(
-                (item, index) => (
-                  <motion.li
-                    key={index}
-                    whileHover={{ x: 5 }}
-                    className="text-gray-600 hover:text-indigo-600 cursor-pointer"
-                  >
-                    <Link to={item}>{item}</Link>
-                  </motion.li>
-                )
-              )}
+              {["Home", "Collection", "About", "Contact"].map((item, index) => (
+                <motion.li
+                  key={index}
+                  whileHover={{ x: 5 }}
+                  className="text-gray-600 hover:text-indigo-600 cursor-pointer"
+                >
+                  <Link to={item}>{item}</Link>
+                </motion.li>
+              ))}
             </ul>
           </motion.div>
 
@@ -92,19 +92,17 @@ const Footer = () => {
               Customer Service
             </h3>
             <ul className="space-y-3">
-              {[
-                "FAQs",
-                "Shipping Policy",
-                "Returns & Exchanges",
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  whileHover={{ x: 5 }}
-                  className="text-gray-600 hover:text-indigo-600 cursor-pointer"
-                >
-                  {item}
-                </motion.li>
-              ))}
+              {["FAQs", "Shipping Policy", "Returns & Exchanges"].map(
+                (item, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    className="text-gray-600 hover:text-indigo-600 cursor-pointer"
+                  >
+                    {item}
+                  </motion.li>
+                )
+              )}
             </ul>
           </motion.div>
 

@@ -90,7 +90,7 @@ const LatestCollection = () => {
               <div className="p-4">
                 <h3 className="font-medium text-gray-900 mb-1 truncate">{product.name}</h3>
                 <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold text-gray-900">PK {product.price}</span>
+                  <span className="text-lg font-bold text-gray-900">PKR {product.price}</span>
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <svg
